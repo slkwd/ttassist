@@ -1,0 +1,165 @@
+/* Stile generale per il contenitore della chat */
+body {
+    font-family: "Poppins", Arial, sans-serif;    
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    max-height: 50vh; /* Limita l’altezza al 70% dell’altezza della viewport */
+    overflow-y: auto; /* Aggiunge lo scroll verticale se il contenuto è troppo lungo */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-message {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.assistant-message {
+    justify-content: flex-start;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-content {
+    max-width: 75%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.user-message .message-content {
+    font-family: "Poppins", Arial, sans-serif;    
+    background-color: #007bff;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.assistant-message .message-content {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: black;
+    border-bottom-left-radius: 0;
+}
+
+/* Stile della barra di input del messaggio */
+.message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    resize: none;
+    outline: none;
+    height: 40px;
+    overflow-y: hidden; /* Nasconde la barra di scorrimento verticale */
+    min-height: 40px;   /* Altezza minima per il campo */
+    max-height: 200px;  /* Altezza massima (opzionale) */
+}
+
+.send-button {
+    background-color: transparent; /* Rimuove lo sfondo */
+    border: none;                  /* Rimuove i bordi */
+    padding: 0;                    /* Rimuove il padding */
+    cursor: pointer;               /* Imposta il cursore a 'pointer' per il click */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-button img {
+    width: 32px;
+    height: 32px;
+}
+/* Puntini fluttuanti per l'attesa della risposta */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    background-color: #007bff;
+    border-radius: 50%;
+    animation: bounce 1.2s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Stile per il blocco ABC */
+.abc-block {
+        background-color: #2d2d2d; /* Colore di sfondo simile a quello del Playground */
+        color: #ffffff;            /* Testo bianco */
+        font-family: "Courier New", Courier, monospace; /* Font monospace */
+        padding: 10px;             /* Padding per separare il testo dal bordo */
+        border-radius: 8px;        /* Bordo arrotondato */
+        font-size: 14px;           /* Dimensione del testo */
+        line-height: 1.5;          /* Altezza della linea per migliorare la leggibilità */
+        white-space: pre-wrap;     /* Mantenere l'indentazione e i ritorni a capo */
+        margin: 10px 0;            /* Spaziatura superiore e inferiore */
+}
+
+/* Pulsante di copia */
+.copy-button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        float: right;
+}
+
+.copy-button:hover {
+        color: #cccccc;
+}
