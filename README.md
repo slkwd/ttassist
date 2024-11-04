@@ -17,10 +17,28 @@
  
   Clone my repo: git clone https://github.com/slkwd/ttassist.git
   
-  npm install
+  Change YOURBACKEND in server.js at
+  
+  	const privateKey = fs.readFileSync('/etc/letsencrypt/live/YOURBACKEND.ORG/privkey.pem', 'utf8');
+  
+  	const certificate = fs.readFileSync('/etc/letsencrypt/live/YOURBACKEND.ORG/fullchain.pem', 'utf8');
+  
+  
+  change yourdomain.org index.html at
+  
+  	const response = await fetch('https://yourdomain.org:8443/api/ask'
+  
+  and if you want 
+  
+  change the name of your assistant in index.html at 
+  
+  	<title>assistant:the Name of your Assistant here</title>
+  
+  
+  __npm install__
   
  # Run
   
-  node server.js
+  __node server.js__
   
   
