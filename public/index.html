@@ -60,7 +60,7 @@
             // Aggiungi il messaggio dell'utente alla chat
             chatBox.innerHTML += `
                 <div class="chat-message user-message">
-                    <img src="/static/user-avatar.png" alt="User Avatar" class="avatar"/>
+                    <img src="/static/user-avatar.png" alt="User" class="avatar"/>
                     <div class="message-content">${message}</div>
                 </div>`;
             
@@ -70,7 +70,7 @@
             const loadingMessage = document.createElement('div');
             loadingMessage.classList.add('chat-message', 'assistant-message');
             loadingMessage.innerHTML = `
-                <img src="/static/assistant-avatar.png" alt="Assistant Avatar" class="avatar"/>
+                <img src="/static/assistant-avatar.png" alt="Assistant" class="avatar"/>
                 <div class="message-content typing-indicator">
                     <span></span><span></span><span></span>
                 </div>`;
@@ -99,7 +99,7 @@
                 // Aggiungi la risposta dell'assistente alla chat
                 chatBox.innerHTML += `
                     <div class="chat-message assistant-message">
-                        <img src="/static/assistant-avatar.png" alt="Assistant Avatar" class="avatar"/>
+                        <img src="/static/assistant-avatar.png" alt="Assistant" class="avatar"/>
                     <div class="message-content">${formattedResponse}</div>
                     </div>`;
 
