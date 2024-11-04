@@ -10,6 +10,9 @@
 
  The name of the project is The Traditional Tune Archive's Companion because I have taught my Assistant everything there is to know about [The Traditional Tune Archive](https://tunearch.org) (my semantic web dedicated to the traditional music of the British Isles, Ireland, Scotland, North America and Canada) however, I believe it is generic enough to be used by anyone who needs to interface with their pre-trained Assistant.
  
+ The architecture consists of a frontend where index.html with the style.css file and icons resides and a backend where the node server (server.js) runs with the application (app.js) that responds in https
+ 
+ 
  # Installation
  
   Clone my repo: git clone https://github.com/slkwd/ttassist.git
