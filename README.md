@@ -32,7 +32,7 @@
   
   and if you want 
   
-  change the name of your assistant in index.html at 
+  change the name of your assistant in index.html between <title> tag </title>
   
   	<title>assistant:the Name of your Assistant here</title>
   
