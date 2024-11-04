@@ -22,6 +22,8 @@
   	const privateKey = fs.readFileSync('/etc/letsencrypt/live/YOURBACKEND.ORG/privkey.pem', 'utf8');
   
   	const certificate = fs.readFileSync('/etc/letsencrypt/live/YOURBACKEND.ORG/fullchain.pem', 'utf8');
+	
+	console.log(`Server HTTPS in esecuzione su https://YOURBACKEND.ORG:${PORT}`);
   
   
   change yourdomain.org index.html at
